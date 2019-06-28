@@ -1,0 +1,138 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs24 \cf0 uestions:\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 how much interplay is there between DE stuff and ABM stuff in research, and how much pde/ continuum limits are done?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 can we do bifurcation diagram - like analyses with agent based models?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 weakness of de stuff is lack of path dependence. how does that arise in agent-based models\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 there\'92s a reading on path dependence\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 does path vs state dependence just depend on how we scope state?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 neighborhood effects are scale-dependent in CA models. (why is this not true in agent-based)\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 i feel like the less favorable modeling techniques are associated in presentation with a fundamentally different approach than the abm bit which isn\'92t necessarily true of abm\'92s general competitors. \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 is there a way to get a joint probability distribution of agent based model outcomes? Can it be treated as a simulation oracle?\
+\
+is common random numbers ever used in agent based simulations?\
+\
+how are spatial features stored? does a pixel have the feature, is the pixel in a bin of the feature? is the feature associated with a range that you then have to check? \
+\
+or are they bins with geographical representations within the bins like something separate?\
+\
+can have literal representation of island with coastline, or you can do an abstraction where the coast is just on the right.\
+\
+best to pre-compute spatial relationships. \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 outline:\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 buyout amounts affect proclivity to flee\
+others flee imply procivity to flee\
+property costs (high risk and low risk)?\
+fleeing affects property cost? how does buyout payment work?\
+Fleeing harms economy, hurts resources, capacity to follow in fleeing.\
+risk intermittently harms economy?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 questions:\
+what level of buyout participation leads to runaway behavior?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 how to maximize long-term flight / minimize long term exposure? lever - buyouts, maybe further subsidies\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 state variables: location/ population levels. Economic resources (area-level and person-level). Utilities for flight and staying. perceived risk? Community membership\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 I\'92m thinking I can do pure utility seeking here. people want to be near other members of their community. They want low flood risk. They want to not spend resources. They want more resources. We set weights on these things according to random unif. \
+\
+possible location variables. Maybe store certain utility information by patch. Should utility be smoothed spatially? Possible resources. or are those agent features? are they agent features influenced by area? Or instead influenced by proximity to community members? affected  by flood risk? will we have actual flood events occur in the model?\
+\
+simplest version: straight utility. some forcing from buyouts. hopefully some people move, changing utilities for others, and  you get interesting behavior. Maybe introduce stochasticity to keep things from being too static?\
+\
+next: resource constraints. In addition to adding utility, buyouts effectively relax constraints.\
+\
+next: dynamic resources. Resources shrink as community shrinks, some people get stuck?\
+\
+another: dynamic property costs\
+\
+another: transient flooding scenarios\
+\
+another: dynamic risk perceptions w/transient flooding scenarios\
+\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 basic dynamics of simplest version:\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 agent has the following:\
+weight on community\
+weight on inertia (because moving is hard)?\
+weight on flood risk (flood risk perception)?\
+weight on cost of moving?\
+weight on financial moving incentive (distance considered?).\
+\
+space has the following calculated:\
+community density (sum with exponential decay term?)\
+flood risk (transient forcing or constant)\
+property value? (how to set for spatial autocorrelation? just smooth it?)\
+\
+\
+how to restrict migration so that they only go to an existing community? maybe cycle through neighborhoods within other community and just only consider those? yeah.\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 should flood risk perception be a product of some true flood risk value (which is likely somewhat variable spatially) and an agent-level weight, effectively accounting for the agent\'92s attitude?\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 maybe the first model should be de-spatialized with only agent-based heterogenaity, then add spatial component in next version.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 another version: two communities to migrate to, and folks have different preferences between them.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 another version: consider urbanicity}
